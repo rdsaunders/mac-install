@@ -14,9 +14,12 @@
 # Notes:
 #
 #   If installing full Xcode, it's better to install that first from the app
-#   store before running the bootstrap script. Otherwise, Homebrew can't access
+#   store before running the automation script. Otherwise, Homebrew can't access
 #   the Xcode libraries as the agreement hasn't been accepted yet.
 
+# Run MacOS X Software Updates
+echo "Running Software Updates..."
+softwareupdate -i -r
 
 # Install XCODE Command Line Tools
 xcode-select --install
