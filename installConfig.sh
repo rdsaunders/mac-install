@@ -105,17 +105,6 @@ CASKUTILS=(
 echo "Installing cask utilities..."
 brew cask install ${CASKUTILS[@]}
 
-
-echo "Installing fonts..."
-brew tap caskroom/fonts
-FONTS=(
-    font-inconsolidata
-    font-roboto
-    font-clear-sans
-)
-brew cask install ${FONTS[@]}
-
-
 echo "Configuring OSX..."
 
 # Require password as soon as screensaver or sleep mode starts
