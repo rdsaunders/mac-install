@@ -13,39 +13,71 @@ brew doctor
 brew install wget
 brew install node
 brew install imagemagick
-brew cask install github-desktop
-brew cask install atom
-brew cask install codekit
-brew cask install cornerstone
-brew cask install vmware-fusion
-brew cask install sublime-text
-brew cask install transmit
+
+
+# Development Tools
+CASKDEV=(
+    github-desktop
+    atom
+    codekit
+    cornerstone
+    vmware-fusion
+    sublime-text
+    transmit
+)
+
+
+echo "Installing cask development tools..."
+brew cask install ${CASKDEV[@]}
 
 # Browsers
-brew cask install firefox
-brew cask install google-chrome
-brew cask install opera
+CASKBROWSERS=(
+    firefox
+    google-chrome
+    opera
+)
 
-# Social & Communication
-brew cask install hipchat
-brew cask install google-hangouts
-brew cask install skype
+echo "Installing cask web browsers..."
+brew cask install ${CASKBROWSERS[@]}
+
 
 # Design & Writing
-brew cask install evernote
-brew cask install imageoptim
-brew cask install sketch
+CASKCREATIVE=(
+    evernote
+    imageoptim
+    sketch
+)
 
-# Utilities
-brew cask install flux
-brew cask install dropbox
-brew cask install 1password
-brew cask install spotify
-brew cask install viscosity
-brew cask install fitbit-connect
-brew cask install google-drive
-brew cask install google-earth
-brew cask install google-photos-backup
+echo "Installing cask design and writing apps..."
+brew cask install ${CASKCREATIVE[@]}
+
+
+# Social & Communication
+CASKCOMMS=(
+    hipchat
+    google-hangouts
+    skype
+)
+
+echo "Installing cask social and communication apps..."
+brew cask install ${CASKCOMMS[@]}
+
+
+# Utlities
+CASKUTILS=(
+    flux
+    dropbox
+    1password
+    spotify
+    viscosity
+    fitbit-connect
+    google-drive
+    google-earth
+    google-photos-backup
+)
+
+echo "Installing cask utilities..."
+brew cask install ${CASKUTILS[@]}
 
 
 echo "Installing fonts..."
@@ -56,6 +88,7 @@ FONTS=(
     font-clear-sans
 )
 brew cask install ${FONTS[@]}
+
 
 echo "Configuring OSX..."
 
