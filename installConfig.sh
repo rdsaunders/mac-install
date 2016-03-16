@@ -7,6 +7,9 @@
 #
 # - Tweetbot (app store)
 # - Wunderlist (app store)
+# - ToDoIst (app store)
+# - IA Writer
+# - Microsoft Remote Desktop
 #
 # Notes:
 #
@@ -68,6 +71,7 @@ CASKCREATIVE=(
     evernote
     imageoptim
     sketch
+    mindnode-pro
 )
 
 echo "Installing cask design and writing apps..."
@@ -79,6 +83,8 @@ CASKCOMMS=(
     hipchat
     google-hangouts
     skype
+    slack
+    franz
 )
 
 echo "Installing cask social and communication apps..."
@@ -96,6 +102,8 @@ CASKUTILS=(
     google-drive
     google-earth
     google-photos-backup
+    sitesucker
+    daisydisk
 )
 
 echo "Installing cask utilities..."
