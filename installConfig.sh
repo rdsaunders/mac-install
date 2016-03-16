@@ -56,3 +56,15 @@ FONTS=(
     font-clear-sans
 )
 brew cask install ${FONTS[@]}
+
+echo "Configuring OSX..."
+
+# Require password as soon as screensaver or sleep mode starts
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Enable tap-to-click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+echo "Bootstrapping complete"
