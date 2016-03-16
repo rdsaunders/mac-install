@@ -46,3 +46,13 @@ brew cask install fitbit-connect
 brew cask install google-drive
 brew cask install google-earth
 brew cask install google-photos-backup
+
+
+echo "Installing fonts..."
+brew tap caskroom/fonts
+FONTS=(
+    font-inconsolidata
+    font-roboto
+    font-clear-sans
+)
+brew cask install ${FONTS[@]}
