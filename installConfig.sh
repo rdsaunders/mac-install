@@ -40,11 +40,10 @@ brew install imagemagick
 CASKDEV=(
     github-desktop
     atom
-    codekit
-    cornerstone
-    vmware-fusion
-    sublime-text
+    visual-studio-code
     transmit
+    sourcetree
+    cyberduck
 )
 
 
@@ -68,6 +67,9 @@ CASKCREATIVE=(
     imageoptim
     sketch
     mindnode-pro
+    adobe-creative-cloud
+    screenflow
+    skyfonts
 )
 
 echo "Installing cask design and writing apps..."
@@ -76,11 +78,8 @@ brew cask install ${CASKCREATIVE[@]}
 
 # Social & Communication
 CASKCOMMS=(
-    hipchat
-    google-hangouts
     skype
     slack
-    franz
 )
 
 echo "Installing cask social and communication apps..."
@@ -89,17 +88,19 @@ brew cask install ${CASKCOMMS[@]}
 
 # Utlities
 CASKUTILS=(
-    flux
     dropbox
     1password
     spotify
     viscosity
-    fitbit-connect
     google-drive
     google-earth
     google-photos-backup
     sitesucker
     daisydisk
+    aerial
+    rescuetime
+    the-unarchiver
+    paparazzi
 )
 
 echo "Installing cask utilities..."
