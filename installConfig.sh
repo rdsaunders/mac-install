@@ -116,4 +116,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Enable Develop menu in Safari
+defaults write com.apple.Safari IncludeDevelopMenu 1
+
 echo "Automation complete"
