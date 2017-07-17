@@ -31,6 +31,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew doctor
 
 # Development
+brew install git
 brew install wget
 brew install node
 brew install imagemagick
