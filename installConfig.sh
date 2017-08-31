@@ -102,6 +102,7 @@ CASKUTILS=(
     rescuetime
     the-unarchiver
     paparazzi
+    qlmarkdown
 )
 
 echo "Installing cask utilities..."
