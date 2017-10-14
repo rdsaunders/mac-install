@@ -35,7 +35,7 @@ brew install git
 brew install wget
 brew install node
 brew install imagemagick
-
+brew install s3cmd
 
 # Development Tools
 CASKDEV=(
