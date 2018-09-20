@@ -90,7 +90,6 @@ CASKUTILS=(
     viscosity
     google-drive-file-stream
     google-photos-backup-and-sync
-    sitesucker
     daisydisk
     rescuetime
     the-unarchiver
