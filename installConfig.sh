@@ -39,7 +39,7 @@ brew install s3cmd
 
 # Development Tools
 CASKDEV=(
-    github-desktop
+    github
     visual-studio-code
     sourcetree
     cyberduck
