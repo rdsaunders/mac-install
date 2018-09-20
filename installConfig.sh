@@ -93,8 +93,8 @@ CASKUTILS=(
     daisydisk
     rescuetime
     the-unarchiver
-    paparazzi
     alfred
+    bartender
 )
 
 echo "Installing cask utilities..."
