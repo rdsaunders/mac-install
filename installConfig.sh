@@ -89,7 +89,7 @@ CASKUTILS=(
     spotify
     viscosity
     google-drive-file-stream
-    google-photos-backup
+    google-photos-backup-and-sync
     sitesucker
     daisydisk
     rescuetime
