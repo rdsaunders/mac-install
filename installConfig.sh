@@ -88,7 +88,7 @@ CASKUTILS=(
     1password
     spotify
     viscosity
-    google-drive
+    google-drive-file-stream
     google-photos-backup
     sitesucker
     daisydisk
