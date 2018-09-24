@@ -76,6 +76,7 @@ brew cask install ${CASKCREATIVE[@]}
 CASKCOMMS=(
     skype
     slack
+    zoomus
 )
 
 echo "Installing cask social and communication apps..."
@@ -85,7 +86,6 @@ brew cask install ${CASKCOMMS[@]}
 # Utlities
 CASKUTILS=(
     dropbox
-    1password
     spotify
     viscosity
     google-drive-file-stream
