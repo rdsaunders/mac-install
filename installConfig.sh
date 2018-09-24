@@ -100,4 +100,7 @@ CASKUTILS=(
 echo "Installing cask utilities..."
 brew cask install ${CASKUTILS[@]}
 
+# Remove shadows from screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
 echo "Automation complete"
