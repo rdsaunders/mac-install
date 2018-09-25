@@ -101,16 +101,12 @@ echo "Installing cask utilities..."
 brew cask install ${CASKUTILS[@]}
 
 # Install visual studio code extensions
-VSEXT=(
-    bierner.markdown-preview-github-styles
-    DavidAnson.vscode-markdownlint
-    file-icons.file-icons
-    mdickin.markdown-shortcuts
-    wayou.vscode-todo-highlight
-}
-
 echo "Installing Visual Studio Extensions..."
-code --install-extension ${VSEXT[@]}
+code --install-extension bierner.markdown-preview-github-styles
+code --install-extension DavidAnson.vscode-markdownlint
+code --install-extension file-icons.file-icons
+code --install-extension mdickin.markdown-shortcuts
+code --install-extension wayou.vscode-todo-highlight
 
 # Remove shadows from screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
