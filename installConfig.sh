@@ -107,6 +107,7 @@ code --install-extension DavidAnson.vscode-markdownlint
 code --install-extension file-icons.file-icons
 code --install-extension mdickin.markdown-shortcuts
 code --install-extension wayou.vscode-todo-highlight
+code --install-extension mrmlnc.vscode-duplicate
 
 # Remove shadows from screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
