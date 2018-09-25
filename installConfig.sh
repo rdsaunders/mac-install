@@ -100,6 +100,10 @@ CASKUTILS=(
 echo "Installing cask utilities..."
 brew cask install ${CASKUTILS[@]}
 
+# Install fonts
+brew tap homebrew/cask-fonts
+brew cask install font-lato
+
 # Install visual studio code extensions
 echo "Installing Visual Studio Extensions..."
 code --install-extension bierner.markdown-preview-github-styles
