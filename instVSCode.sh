@@ -1,3 +1,11 @@
+# Install Homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Check everything is ok with homebrew
+brew doctor
+
+brew cask install visual-studio-code
+
 # Install visual studio code extensions
 VSEXT=(
     bierner.markdown-preview-github-styles
