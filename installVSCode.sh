@@ -13,7 +13,7 @@ VSEXT=(
     file-icons.file-icons
     mdickin.markdown-shortcuts
     wayou.vscode-todo-highlight
-}
+)
 
 echo "Installing Visual Studio Extensions..."
 code --install-extension ${VSEXT[@]}
