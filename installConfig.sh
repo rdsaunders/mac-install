@@ -100,6 +100,7 @@ CASKUTILS=(
     the-unarchiver
     alfred
     bartender
+    
 )
 
 echo "Installing cask utilities..."
@@ -131,13 +132,13 @@ eval "$(ssh-agent -s)"
 ssh-add -K ~/.ssh/id_rsa
 pbcopy < ~/.ssh/id_rsa.pub
 
-
 echo "Creating folder structure..."
 [[ ! -d GIT ]] && mkdir GIT
 [[ ! -d GitHub ]] && mkdir GitHub
 
 # Remove shadows from screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
+
 
 echo "***************"
 echo "Automation complete"
