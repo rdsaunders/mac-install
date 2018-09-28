@@ -17,6 +17,9 @@
 #   store before running the automation script. Otherwise, Homebrew can't access
 #   the Xcode libraries as the agreement hasn't been accepted yet.
 
+# Specify User Password
+sudo -v
+
 # Run MacOS X Software Updates
 echo "Running Software Updates..."
 softwareupdate -i -r
