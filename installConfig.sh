@@ -44,6 +44,7 @@ CASKDEV=(
     visual-studio-code
     sourcetree
     cyberduck
+    postman
 )
 
 
