@@ -6,7 +6,7 @@ brew install mas
 # get Apple ID
 echo "You'll need to open the Mac App Store and ensure you are logged in"
 
-$ read -rsp $'Press any key to continue...\n' -n1 key
+read -p "Press [Enter] key to start install..."
 
 # install macos apps
 mas install 1333542190 # 1Password 7 (7.2.1)
