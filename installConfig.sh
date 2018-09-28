@@ -120,7 +120,26 @@ code --install-extension mrmlnc.vscode-duplicate
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension Tyriar.sort-lines
 
+# Git Config & SSH Key Generation
+
+echo "Setting up Git Config and SSH Key Gen"
+
+git config --global user.name "Richard Saunders"
+git config --global user.email "r.saunders@zengenti.com"
+ssh-keygen -t rsa -C "r.saunders@zengenti.com"
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+
+
+
 # Remove shadows from screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+
+
+echo "***************"
 echo "Automation complete"
+echo "---------------"
+echo "Now go to Bitbucket > Manage Account > SSH Keys > Add key and paste in the copied public key"
+echo "***************"
