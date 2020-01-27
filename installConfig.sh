@@ -40,6 +40,7 @@ brew install nvm
 # brew install node
 brew install imagemagick
 brew install s3cmd
+brew install python3
 
 # Development Tools
 CASKDEV=(
@@ -73,6 +74,7 @@ CASKCREATIVE=(
     ocenaudio
     figma
     figmadaemon
+    nucleo
 )
 
 echo "Installing cask design and writing apps..."
