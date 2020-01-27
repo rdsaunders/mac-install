@@ -58,6 +58,7 @@ brew cask install --appdir="/Applications" ${CASKDEV[@]}
 CASKBROWSERS=(
     firefox
     google-chrome
+    microsoft-edge
 )
 
 echo "Installing cask web browsers..."
@@ -68,9 +69,10 @@ brew cask install --appdir="/Applications" ${CASKBROWSERS[@]}
 CASKCREATIVE=(
     imageoptim
     sketch
-    adobe-creative-cloud
     screenflow
-    skyfonts
+    ocenaudio
+    figma
+    figmadaemon
 )
 
 echo "Installing cask design and writing apps..."
@@ -100,7 +102,6 @@ CASKUTILS=(
     the-unarchiver
     alfred
     bartender
-    
 )
 
 echo "Installing cask utilities..."
