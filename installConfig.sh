@@ -95,7 +95,12 @@ brew cask install --appdir="/Applications" ${CASKUTILS[@]}
 
 # Install fonts
 brew tap homebrew/cask-fonts
-brew cask install font-lato
+brew install font-lato
+brew install font-poppins
+brew install font-sf-compact
+brew install font-sf-mono
+brew install font-sf-po
+brew install font-new-york
 
 # Install visual studio code extensions
 echo "Installing Visual Studio Extensions..."
