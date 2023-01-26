@@ -18,6 +18,9 @@ softwareupdate -i -r
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Disable Bre Analytics
+brew analytics off
+brew analytics
 
 # Check everything is ok with homebrew
 brew doctor
