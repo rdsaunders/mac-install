@@ -5,8 +5,6 @@
 # Some apps don't have a cask and so still need to be installed by hand. These
 # include:
 #
-# - Wunderlist (app store)
-# - ToDoIst (app store)
 # - IA Writer
 # - Bear
 # - Contrast colour accessibility
@@ -24,9 +22,6 @@ sudo -v
 echo "Running Software Updates..."
 softwareupdate -i -r
 
-# Install XCODE Command Line Tools
-xcode-select --install
-
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -36,11 +31,9 @@ brew doctor
 # Development
 brew install git
 brew install wget
+brew install curl
 brew install nvm
-# brew install node
-brew install imagemagick
-brew install s3cmd
-brew install python3
+nvm install node
 
 # Development Tools
 CASKDEV=(
@@ -69,12 +62,9 @@ brew cask install --appdir="/Applications" ${CASKBROWSERS[@]}
 # Design & Writing
 CASKCREATIVE=(
     imageoptim
-    sketch
     screenflow
-    ocenaudio
     figma
     figmadaemon
-    nucleo
 )
 
 echo "Installing cask design and writing apps..."
@@ -83,9 +73,8 @@ brew cask install --appdir="/Applications" ${CASKCREATIVE[@]}
 
 # Social & Communication
 CASKCOMMS=(
-    skype
     slack
-    zoomus
+    zoom
 )
 
 echo "Installing cask social and communication apps..."
@@ -95,15 +84,9 @@ brew cask install --appdir="/Applications" ${CASKCOMMS[@]}
 # Utlities
 CASKUTILS=(
     dropbox
-    spotify
     viscosity
-    google-drive-file-stream
-    google-photos-backup-and-sync
     daisydisk
-    rescuetime
     the-unarchiver
-    alfred
-    bartender
 )
 
 echo "Installing cask utilities..."
