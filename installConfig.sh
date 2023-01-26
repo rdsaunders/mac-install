@@ -42,6 +42,7 @@ CASKDEV=(
     sourcetree
     cyberduck
     postman
+    docker
 )
 
 
@@ -65,6 +66,8 @@ CASKCREATIVE=(
     screenflow
     figma
     figmadaemon
+    notion
+    grammarly
 )
 
 echo "Installing cask design and writing apps..."
@@ -75,6 +78,9 @@ brew cask install --appdir="/Applications" ${CASKCREATIVE[@]}
 CASKCOMMS=(
     slack
     zoom
+    microsoft-teams
+    whatsapp
+    discord
 )
 
 echo "Installing cask social and communication apps..."
@@ -87,6 +93,8 @@ CASKUTILS=(
     viscosity
     daisydisk
     the-unarchiver
+    1password
+    loom
 )
 
 echo "Installing cask utilities..."
