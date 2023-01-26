@@ -106,7 +106,7 @@ brew install font-lato
 brew install font-poppins
 brew install font-sf-compact
 brew install font-sf-mono
-brew install font-sf-po
+brew install font-sf-pro
 brew install font-new-york
 
 # Install visual studio code extensions
