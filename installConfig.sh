@@ -2,13 +2,6 @@
 # 
 # Automation script for setting up a new OSX machine
 # 
-# Some apps don't have a cask and so still need to be installed by hand. These
-# include:
-#
-# - IA Writer
-# - Bear
-# - Contrast colour accessibility
-#
 # Notes:
 #
 #   If installing full Xcode, it's better to install that first from the app
