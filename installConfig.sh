@@ -83,7 +83,6 @@ brew cask install --appdir="/Applications" ${CASKCOMMS[@]}
 CASKUTILS=(
     dropbox
     viscosity
-    daisydisk
     the-unarchiver
     1password
     loom
