@@ -30,7 +30,6 @@ nvm install node
 
 # Development Tools
 CASKDEV=(
-    github
     visual-studio-code
     sourcetree
     cyberduck
