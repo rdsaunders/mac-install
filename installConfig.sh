@@ -39,7 +39,7 @@ CASKDEV=(
 
 
 echo "Installing cask development tools..."
-brew cask install --appdir="/Applications" ${CASKDEV[@]}
+brew install --appdir="/Applications" ${CASKDEV[@]}
 
 # Browsers
 CASKBROWSERS=(
@@ -49,7 +49,7 @@ CASKBROWSERS=(
 )
 
 echo "Installing cask web browsers..."
-brew cask install --appdir="/Applications" ${CASKBROWSERS[@]}
+brew install --appdir="/Applications" ${CASKBROWSERS[@]}
 
 
 # Design & Writing
@@ -63,7 +63,7 @@ CASKCREATIVE=(
 )
 
 echo "Installing cask design and writing apps..."
-brew cask install --appdir="/Applications" ${CASKCREATIVE[@]}
+brew install --appdir="/Applications" ${CASKCREATIVE[@]}
 
 
 # Social & Communication
@@ -76,7 +76,7 @@ CASKCOMMS=(
 )
 
 echo "Installing cask social and communication apps..."
-brew cask install --appdir="/Applications" ${CASKCOMMS[@]}
+brew install --appdir="/Applications" ${CASKCOMMS[@]}
 
 
 # Utlities
@@ -89,7 +89,7 @@ CASKUTILS=(
 )
 
 echo "Installing cask utilities..."
-brew cask install --appdir="/Applications" ${CASKUTILS[@]}
+brew install --appdir="/Applications" ${CASKUTILS[@]}
 
 # Install fonts
 brew tap homebrew/cask-fonts
