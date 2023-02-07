@@ -96,11 +96,11 @@ brew install font-new-york
 # code --install-extension Tyriar.sort-lines
 
 # Setup dock
-pkg_name=$(curl -s https://api.github.com/repos/kcrawford/dockutil/releases/latest | grep "dockutil-.*\.pkg\"" \
-     | head -1| cut -d : -f 2,3 | tr -d \" | tr -d ,| xargs )
-source="https://github.com/kcrawford/dockutil/releases/latest/download/${pkg_name}"
-tempPath=$(mktemp -t "dockutil.XXXXXXXXX")
-curl -L --max-redirs 5 -sS "$source" -o "$tempPath"
+brew install jq
+DLURL=$(curl --silent "https://api.github.com/repos/kcrawford/dockutil/releases/latest" | jq -r '.assets[].browser_download_url' | grep pkg)
+curl -sL ${DLURL} -o /tmp/dockutil.pkg
+sudo installer -pkg "/tmp/dockutil.pkg" -target /
+rm /tmp/dockutil.pkg
 
 ## Remove all items
 dockutil --remove all
