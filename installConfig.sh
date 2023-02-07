@@ -41,48 +41,40 @@ nvm install node
 brew install yarn  
 
 
-## Install casks
-install_cask () { 
-    if brew info "${1}" | grep "Not installed" >/dev/null 2>&1 ; then 
-        brew install --cask "${1}"
-    else
-        echo "The brew cask ${1} has already been installed"
-    fi
-}
 
 # Development Tools
-install_cask visual-studio-code
-install_cask sourcetree
-install_cask cyberduck
-install_cask postman
-install_cask docker
+brew install --cask visual-studio-code
+brew install --cask sourcetree
+brew install --cask cyberduck
+brew install --cask postman
+brew install --cask docker
 
 # Browsers
-install_cask firefox
-install_cask google-chrome
-install_cask microsoft-edge
+brew install --cask firefox
+brew install --cask google-chrome
+brew install --cask microsoft-edge
 
 # Design & Writing
-install_cask imageoptim
-install_cask screenflow
-install_cask figma
-install_cask figmadaemon
-install_cask notion
-install_cask grammarly
+brew install --cask imageoptim
+brew install --cask screenflow
+brew install --cask figma
+brew install --cask figmadaemon
+brew install --cask notion
+brew install --cask grammarly
 
 # Social & Communication
-install_cask slack
-install_cask zoom
-install_cask microsoft-teams
-install_cask whatsapp
-install_cask discord
+brew install --cask slack
+brew install --cask zoom
+brew install --cask microsoft-teams
+brew install --cask whatsapp
+brew install --cask discord
 
 # Utlities
-install_cask dropbox
-install_cask viscosity
-install_cask the-unarchiver
-install_cask 1password
-install_cask loom
+brew install --cask dropbox
+brew install --cask viscosity
+brew install --cask the-unarchiver
+brew install --cask 1password
+brew install --cask loom
 
 
 # Install fonts
