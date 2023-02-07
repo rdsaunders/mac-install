@@ -41,68 +41,50 @@ brew install nvm
 nvm install node
 brew install yarn  
 
+
+## Install casks
+install_cask () { 
+    if brew info "${1}" | grep "Not installed" >/dev/null 2>&1 ; then 
+        brew install --cask "${1}"
+    else
+        echo "The brew cask ${1} has already been installed"
+    fi
+}
+
 # Development Tools
-CASKDEV=(
-    visual-studio-code
-    sourcetree
-    cyberduck
-    postman
-    docker
-)
-
-
-echo "Installing cask development tools..."
-brew install --cask --appdir="/Applications" ${CASKDEV[@]}
+install_cask visual-studio-code
+install_cask sourcetree
+install_cask cyberduck
+install_cask postman
+install_cask docker
 
 # Browsers
-CASKBROWSERS=(
-    firefox
-    google-chrome
-    microsoft-edge
-)
-
-echo "Installing cask web browsers..."
-brew install --cask --appdir="/Applications" ${CASKBROWSERS[@]}
-
+install_cask firefox
+install_cask google-chrome
+install_cask microsoft-edge
 
 # Design & Writing
-CASKCREATIVE=(
-    imageoptim
-    screenflow
-    figma
-    figmadaemon
-    notion
-    grammarly
-)
-
-echo "Installing cask design and writing apps..."
-brew install --cask --appdir="/Applications" ${CASKCREATIVE[@]}
-
+install_cask imageoptim
+install_cask screenflow
+install_cask figma
+install_cask figmadaemon
+install_cask notion
+install_cask grammarly
 
 # Social & Communication
-CASKCOMMS=(
-    slack
-    zoom
-    microsoft-teams
-    whatsapp
-    discord
-)
-
-echo "Installing cask social and communication apps..."
-brew install --cask --appdir="/Applications" ${CASKCOMMS[@]}
-
+install_cask slack
+install_cask zoom
+install_cask microsoft-teams
+install_cask whatsapp
+install_cask discord
 
 # Utlities
-CASKUTILS=(
-    dropbox
-    viscosity
-    the-unarchiver
-    1password
-    loom
-)
+install_cask dropbox
+install_cask viscosity
+install_cask the-unarchiver
+install_cask 1password
+install_cask loom
 
-echo "Installing cask utilities..."
-brew install --cask --appdir="/Applications" ${CASKUTILS[@]}
 
 # Install fonts
 brew tap homebrew/cask-fonts
