@@ -37,7 +37,6 @@ brew install dockutil
 ## Node / Javascript
 mkdir ~/.nvm
 brew install nvm
-echo [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh >> ~/.zprofile && source ~/.zprofile
 nvm install node
 brew install yarn  
 
