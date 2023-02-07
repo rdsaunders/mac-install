@@ -58,7 +58,6 @@ brew install --cask microsoft-edge
 brew install --cask imageoptim
 brew install --cask screenflow
 brew install --cask figma
-brew install --cask figmadaemon
 brew install --cask notion
 brew install --cask grammarly
 
