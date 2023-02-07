@@ -31,7 +31,6 @@ brew doctor
 # Development
 brew install git
 brew install wget
-brew install curl
 brew install dockutil
 
 # Language
