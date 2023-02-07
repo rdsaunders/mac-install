@@ -18,8 +18,7 @@ softwareupdate -i -r
 # Install Homebrew
 if ! [[ $(grep "bin/brew shellenv" "$HOME/.zprofile") ]] ; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile    
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.zprofile && source ~/.zprofile
 fi
 
 # Disable Bre Analytics
