@@ -31,7 +31,6 @@ brew doctor
 # Development
 brew install git
 brew install wget
-brew install dockutil
 
 # Language
 ## Node / Javascript
@@ -97,6 +96,11 @@ brew install font-new-york
 # code --install-extension Tyriar.sort-lines
 
 # Setup dock
+pkg_name=$(curl -s https://api.github.com/repos/kcrawford/dockutil/releases/latest | grep "dockutil-.*\.pkg\"" \
+     | head -1| cut -d : -f 2,3 | tr -d \" | tr -d ,| xargs )
+source="https://github.com/kcrawford/dockutil/releases/latest/download/${pkg_name}"
+tempPath=$(mktemp -t "dockutil.XXXXXXXXX")
+curl -L --max-redirs 5 -sS "$source" -o "$tempPath"
 
 ## Remove all items
 dockutil --remove all
