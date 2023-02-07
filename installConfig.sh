@@ -26,16 +26,16 @@ brew analytics
 brew doctor
 
 # Development
-# brew install git
-# brew install wget
-# brew install curl
+brew install git
+brew install wget
+brew install curl
 
 # Language
 ## Node / Javascript
-# mkdir ~/.nvm
-# brew install nvm
-# nvm install node
-# brew install yarn  
+mkdir ~/.nvm
+brew install nvm
+nvm install node
+brew install yarn  
 
 # Development Tools
 CASKDEV=(
@@ -110,15 +110,15 @@ brew install font-sf-pro
 brew install font-new-york
 
 # Install visual studio code extensions
-echo "Installing Visual Studio Extensions..."
-code --install-extension bierner.markdown-preview-github-styles
-code --install-extension DavidAnson.vscode-markdownlint
-code --install-extension file-icons.file-icons
-code --install-extension mdickin.markdown-shortcuts
-code --install-extension wayou.vscode-todo-highlight
-code --install-extension mrmlnc.vscode-duplicate
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension Tyriar.sort-lines
+# echo "Installing Visual Studio Extensions..."
+# code --install-extension bierner.markdown-preview-github-styles
+# code --install-extension DavidAnson.vscode-markdownlint
+# code --install-extension file-icons.file-icons
+# code --install-extension mdickin.markdown-shortcuts
+# code --install-extension wayou.vscode-todo-highlight
+# code --install-extension mrmlnc.vscode-duplicate
+# code --install-extension streetsidesoftware.code-spell-checker
+# code --install-extension Tyriar.sort-lines
 
 # Git Config & SSH Key Generation
 
