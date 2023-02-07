@@ -16,7 +16,11 @@ echo "Running Software Updates..."
 softwareupdate -i -r
 
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! [[ $(grep "bin/brew shellenv" "$HOME/.zprofile") ]] ; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile    
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Disable Bre Analytics
 brew analytics off
