@@ -96,6 +96,12 @@ brew install font-new-york
 # code --install-extension streetsidesoftware.code-spell-checker
 # code --install-extension Tyriar.sort-lines
 
+# Setup dock
+
+## Remove all items
+dockutil --remove all
+
+
 # Git Config & SSH Key Generation
 
 echo "Setting up Git Config and SSH Key Gen"
