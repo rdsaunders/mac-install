@@ -31,11 +31,11 @@ defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 # Finder | Desktop > View options | Text size
 /usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":textSize 12" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Label position: bottom
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":labelOnBottom 1" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Show item info
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showItemInfo 1" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Show icon preview
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showIconPreview true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showIconPreview 1" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Stack by Kind
 /usr/libexec/PlistBuddy -c "Add :\"DesktopViewSettings\":GroupBy string Kind" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings\":GroupBy string Kind" ~/Library/Preferences/com.apple.finder.plist
