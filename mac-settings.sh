@@ -6,9 +6,9 @@ echo "Setting some Mac settings..."
 # For a helpful list of Mac OS defaults refer to https://macos-defaults.com. 
 # There is also a diff.sh script that can be run to locate the setting you are looking for.
 
-#================================================
-# CLOSE SYSTEM PREFERENCES
-#================================================
+echo #================================================
+echo # CLOSE SYSTEM PREFERENCES
+echo #================================================
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
