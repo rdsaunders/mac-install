@@ -143,11 +143,13 @@ defaults write -g "NSNavPanelExpandedStateForSaveMode" -bool "true" && \
 defaults write -g "NSNavPanelExpandedStateForSaveMode2" -bool "true"
 
 
-echo "Restart SystemUIServer"
+
+#================================================
+# Kill affected applications
+#================================================
 killall SystemUIServer
-echo "RestartFinder"
+killall cfprefsd
 killall Finder
-echo "Restart Dock"
 killall Dock
 
 
