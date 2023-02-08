@@ -7,12 +7,12 @@ echo "Setting some Mac settings..."
 # There is also a diff.sh script that can be run to locate the setting you are looking for.
 
 #================================================
-# CLOSE SYSTEM PREFERENCES
+# Close System Preferences
 #================================================
-
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
+
 
 #================================================
 # Finder - General
@@ -37,6 +37,7 @@ defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 # Finder | Renaming | Disable warning before changing an extension
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 
+
 #================================================
 # Finder - Desktop
 #================================================
@@ -57,10 +58,6 @@ defaults write com.apple.finder "FXPreferredGroupBy" -string "Name"
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:GroupBy kind" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Sort by Date Added
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy dateAdded" ~/Library/Preferences/com.apple.finder.plist
-
-# System | Save Dialogs | Expand save panel globally
-defaults write -g "NSNavPanelExpandedStateForSaveMode" -bool "true" && \
-defaults write -g "NSNavPanelExpandedStateForSaveMode2" -bool "true"
 
 
 #================================================
@@ -136,10 +133,14 @@ defaults write com.apple.Safari.SandboxBroker "ShowDevelopMenu" -bool "true"
 
 
 #================================================
-# System - Tools
+# System - OS Defaults
 #================================================
 # Screenshots | Remove default dropshadow
 defaults write com.apple.screencapture "disable-shadow" -bool "true"
+
+# System | Save Dialogs | Expand save panel globally
+defaults write -g "NSNavPanelExpandedStateForSaveMode" -bool "true" && \
+defaults write -g "NSNavPanelExpandedStateForSaveMode2" -bool "true"
 
 
 echo "Restart SystemUIServer"
