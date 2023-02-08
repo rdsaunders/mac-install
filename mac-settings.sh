@@ -27,9 +27,9 @@ defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 
 # Finder | Desktop > View options | Icon size
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":iconSize integer 48" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":iconSize int 48" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Text size
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":textSize integer 12" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":textSize int 12" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Label position: bottom
 /usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":labelOnBottom bool true" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Show item info
