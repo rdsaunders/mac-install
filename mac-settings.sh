@@ -27,21 +27,21 @@ defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 
 # Finder | Desktop > View options | Icon size
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":iconSize 48" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":iconSize int 48" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Text size
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":textSize 12" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":textSize int 12" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Label position: bottom
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":labelOnBottom true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":labelOnBottom bool true" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Show item info
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showItemInfo bool true" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Show icon preview
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showIconPreview true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showIconPreview bool true" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Stack by Kind
-/usr/libexec/PlistBuddy -c "Add :\"DesktopViewSettings\":GroupBy kind" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings\":GroupBy kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Add :\"DesktopViewSettings\":GroupBy string Kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings\":GroupBy string kind" ~/Library/Preferences/com.apple.finder.plist
 
 # Finder | Desktop > View options | Sort by Date Added
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":arrangeBy dateAdded" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":arrangeBy string dateAdded" ~/Library/Preferences/com.apple.finder.plist
 
 
 # System | Save Dialogs | Expand save panel globally
