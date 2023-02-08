@@ -6,6 +6,18 @@ echo "Setting some Mac settings..."
 # For a helpful list of Mac OS defaults refer to https://macos-defaults.com. 
 # There is also a diff.sh script that can be run to locate the setting you are looking for.
 
+#================================================
+# CLOSE SYSTEM PREFERENCES
+#================================================
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+#================================================
+# FINDER General
+#================================================
+
 # Finder | Show Path Bar
 defaults write com.apple.finder "ShowPathbar" -bool "true"
 # Finder | Show folders and files as list 
@@ -26,24 +38,27 @@ defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 # Finder | Renaming | Disable warning before changing an extension
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 
+#================================================
+# FINDER DESKTOP
+#================================================
+
+# Set preferred group by 
+defaults write com.apple.finder "FXPreferredGroupBy" -string "Name"
 # Finder | Desktop > View options | Icon size
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":iconSize 48" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Text size
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":textSize 12" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 12" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Label position: bottom
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":labelOnBottom 1" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:labelOnBottom 1" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Show item info
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showItemInfo 1" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo 1" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Show icon preview
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showIconPreview 1" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showIconPreview 1" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Stack by Kind
-defaults write com.apple.finder "FXPreferredGroupBy" -string "Kind"
-/usr/libexec/PlistBuddy -c "Add :\"DesktopViewSettings\":GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings\":GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
-
+/usr/libexec/PlistBuddy -c "Add :DesktopViewSettings:GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Sort by Date Added
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":arrangeBy dateAdded" ~/Library/Preferences/com.apple.finder.plist
-
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy dateAdded" ~/Library/Preferences/com.apple.finder.plist
 
 # System | Save Dialogs | Expand save panel globally
 defaults write -g "NSNavPanelExpandedStateForSaveMode" -bool "true" && \
