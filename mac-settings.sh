@@ -18,6 +18,15 @@ defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "true"
 defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
 # Finder | Show removeable media on desktop
 defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "true"
+# Finder | Set default location to home folder
+defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
+# Finder | Trash | Automatically empty bin after 30 days
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
+
+# System | Save Dialogs | Expand save panel globally
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 
 
 # Settings | Appearance | Allow wallpaper tinting in windows `Off`
@@ -25,7 +34,6 @@ defaults write NSGlobalDomain "AppleReduceDesktopTinting" -bool "false";
 # Settings | Appearance | Show scroll bars `Always`
 defaults write NSGlobalDomain "AppleShowScrollBars" -string "Always"
 
-# Settings | Siri & Spotlight | Search results | Bookmarks & History `Off`
 
 # Settings | Desktop & Dock | Size `Small`
 defaults write com.apple.dock "tilesize" -int "16"
