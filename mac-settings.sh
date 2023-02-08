@@ -30,6 +30,7 @@ defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 
 
 # Settings | Appearance | Allow wallpaper tinting in windows `Off`
+# Note: This is not a boolean as you'd expect and the value is in reverse 1=Off, 0=On
 defaults write NSGlobalDomain "AppleReduceDesktopTinting" -int "1"
 # Settings | Appearance | Show scroll bars `Always`
 defaults write NSGlobalDomain "AppleShowScrollBars" -string "Always"
@@ -44,7 +45,8 @@ defaults write com.apple.dock "largesize" -int "128"
 # Settings | Desktop & Dock | Position `Bottom`
 defaults write com.apple.dock "orientation" -string "bottom"
 
-# Settings | Desktop & Dock | Default web browser `Firefox`
+# Settings | Siri & Spotlight
+defaults write com.apple.Siri "StatusMenuVisible" -bool "false"
 
 
 # Settings | Mouse | Tracking speed `Fast`
