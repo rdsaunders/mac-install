@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 echo "Setting some Mac settings..."
 
 
