@@ -23,10 +23,12 @@ defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 # Finder | Trash | Automatically empty bin after 30 days
 defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
+# Finder | Renaming | Disable warning before changing an extension
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 
 # System | Save Dialogs | Expand save panel globally
-defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
-defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write -g "NSNavPanelExpandedStateForSaveMode" -bool "true" && \
+defaults write -g "NSNavPanelExpandedStateForSaveMode2" -bool "true"
 
 
 # Settings | Appearance | Allow wallpaper tinting in windows `Off`
