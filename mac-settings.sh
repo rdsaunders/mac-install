@@ -30,7 +30,7 @@ defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 
 
 # Settings | Appearance | Allow wallpaper tinting in windows `Off`
-defaults write NSGlobalDomain "AppleReduceDesktopTinting" -int "0"
+defaults write NSGlobalDomain "AppleReduceDesktopTinting" -int "1"
 # Settings | Appearance | Show scroll bars `Always`
 defaults write NSGlobalDomain "AppleShowScrollBars" -string "Always"
 
