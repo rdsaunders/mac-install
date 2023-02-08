@@ -82,8 +82,12 @@ defaults write com.apple.Safari.SandboxBroker "ShowDevelopMenu" -bool "true"
 # Screenshots | Remove default dropshadow
 defaults write com.apple.screencapture "disable-shadow" -bool "true"
 
-killall Dock
-killall Finder
+echo "Restart SystemUIServer"
 killall SystemUIServer
+echo "RestartFinder"
+killall Finder
+echo "Restart Dock"
+killall Dock
+
 
 echo "Done!"
