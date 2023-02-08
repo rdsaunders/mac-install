@@ -8,6 +8,15 @@ echo "Setting some Mac settings..."
 defaults write com.apple.finder "ShowPathbar" -bool "true"
 # Finder | Show folders and files as list 
 defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
+# Finder | Show hard drives on desktop
+defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "true"
+# Finder | Show external hard drives on desktop
+defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "true"
+# Finder | Show mounted servers on desktop
+defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
+# Finder | Show removeable media on desktop
+defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "true"
+
 
 # Settings | Appearance | Allow wallpaper tinting in windows `Off`
 defaults write NSGlobalDomain "AppleReduceDesktopTinting" -bool "false";
@@ -49,12 +58,20 @@ defaults write com.apple.AppleMultitouchTrackpad "TrackpadCornerSecondaryClick" 
 # Settings | Trackpad | Tap to click `On`
 defaults write com.apple.AppleMultitouchTrackpad "Clicking" -bool "true"
 
+
 # Settings | Keyboard | Keyboard navigation `On`
 defaults write NSGlobalDomain "AppleKeyboardUIMode" -int "2"
+
 
 # Safari | Settings | Advanced | Show Develop menu in menu bar
 defaults write com.apple.Safari.SandboxBroker "ShowDevelopMenu" -bool "true"
 
 
+# Screenshots | Remove default dropshadow
+defaults write com.apple.screencapture "disable-shadow" -bool "true"
+
+killall Dock
 killall Finder
+killall SystemUIServer
+
 echo "Done!"
