@@ -37,11 +37,11 @@ defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 # Finder | Desktop > View options | Show icon preview
 /usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":showIconPreview bool true" ~/Library/Preferences/com.apple.finder.plist
 # Finder | Desktop > View options | Stack by Kind
-/usr/libexec/PlistBuddy -c "Add :\"DesktopViewSettings\":GroupBy string Kind" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings\":GroupBy string kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Add :\"DesktopViewSettings\":GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings\":GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
 
 # Finder | Desktop > View options | Sort by Date Added
-/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":arrangeBy string dateAdded" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :\"DesktopViewSettings:IconViewSettings\":arrangeBy dateAdded" ~/Library/Preferences/com.apple.finder.plist
 
 
 # System | Save Dialogs | Expand save panel globally
