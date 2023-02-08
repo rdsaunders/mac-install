@@ -15,9 +15,8 @@ echo "Setting some Mac settings..."
 osascript -e 'tell application "System Preferences" to quit'
 
 #================================================
-# FINDER General
+# Finder - General
 #================================================
-
 # Finder | Show Path Bar
 defaults write com.apple.finder "ShowPathbar" -bool "true"
 # Finder | Show folders and files as list 
@@ -39,9 +38,8 @@ defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
 
 #================================================
-# FINDER DESKTOP
+# Finder - Desktop
 #================================================
-
 # Set preferred group by 
 defaults write com.apple.finder "FXPreferredGroupBy" -string "Name"
 # Finder | Desktop > View options | Icon size
@@ -65,6 +63,9 @@ defaults write -g "NSNavPanelExpandedStateForSaveMode" -bool "true" && \
 defaults write -g "NSNavPanelExpandedStateForSaveMode2" -bool "true"
 
 
+#================================================
+# Settings - Appearance
+#================================================
 # Settings | Appearance | Allow wallpaper tinting in windows `Off`
 # Note: This is not a boolean as you'd expect and the value is in reverse 1=Off, 0=On
 defaults write NSGlobalDomain "AppleReduceDesktopTinting" -int "1"
@@ -72,6 +73,9 @@ defaults write NSGlobalDomain "AppleReduceDesktopTinting" -int "1"
 defaults write NSGlobalDomain "AppleShowScrollBars" -string "Always"
 
 
+#================================================
+# Settings - Dock
+#================================================
 # Settings | Desktop & Dock | Size `Small`
 defaults write com.apple.dock "tilesize" -int "16"
 # Settings | Desktop & Dock | Turn on magnification `On`
@@ -81,10 +85,17 @@ defaults write com.apple.dock "largesize" -int "128"
 # Settings | Desktop & Dock | Position `Bottom`
 defaults write com.apple.dock "orientation" -string "bottom"
 
+
+#================================================
+# Settings - Siri & Spotlight
+#================================================
 # Settings | Siri & Spotlight
 defaults write com.apple.Siri "StatusMenuVisible" -bool "false"
 
 
+#================================================
+# Settings - Mouse
+#================================================
 # Settings | Mouse | Tracking speed `Fast`
 defaults write NSGlobalDomain "com.apple.mouse.scaling" -int "3"
 # Settings | Mouse | Natural scrolling `On`
@@ -94,6 +105,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.mouse "MouseButtonMode"
 defaults write com.apple.AppleMultitouchMouse "MouseButtonMode" -string "TwoButton"
 
 
+#================================================
+# Settings - Trackpad
+#================================================
 # Settings | Trackpad | Tracking speed `4`
 defaults write NSGlobalDomain "com.apple.trackpad.scaling" -int "3"
 # Settings | Trackpad | Click `Medium`
@@ -107,16 +121,26 @@ defaults write com.apple.AppleMultitouchTrackpad "TrackpadCornerSecondaryClick" 
 defaults write com.apple.AppleMultitouchTrackpad "Clicking" -bool "true"
 
 
+#================================================
+# Settings - Keyboard
+#================================================
 # Settings | Keyboard | Keyboard navigation `On`
 defaults write NSGlobalDomain "AppleKeyboardUIMode" -int "2"
 
 
+#================================================
+# Application - Safari
+#================================================
 # Safari | Settings | Advanced | Show Develop menu in menu bar
 defaults write com.apple.Safari.SandboxBroker "ShowDevelopMenu" -bool "true"
 
 
+#================================================
+# System - Tools
+#================================================
 # Screenshots | Remove default dropshadow
 defaults write com.apple.screencapture "disable-shadow" -bool "true"
+
 
 echo "Restart SystemUIServer"
 killall SystemUIServer
