@@ -3,15 +3,15 @@ A script for configuring a new mac using Homebrew &amp; Cask
 
 Brew, Casks
 
-`curl -L https://raw.githubusercontent.com/rdsaunders/mac-install/master/installConfig.sh | bash`
+`curl -L https://raw.githubusercontent.com/rdsaunders/mac-install/master/installConfig.sh | zsh`
 
 Mac settings and defaults
 
-`curl -L https://raw.githubusercontent.com/rdsaunders/mac-install/master/mac-settings.sh | bash`
+`curl -L https://raw.githubusercontent.com/rdsaunders/mac-install/master/mac-settings.sh | zsh`
 
 App store applications
 
-`curl -L https://raw.githubusercontent.com/rdsaunders/mac-install/master/mas-install.sh | bash`
+`curl -L https://raw.githubusercontent.com/rdsaunders/mac-install/master/mas-install.sh | zsh`
 
 
 ## Save keyboard shortcuts
