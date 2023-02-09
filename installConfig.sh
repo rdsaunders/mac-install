@@ -1,17 +1,17 @@
 #!/usr/bin/env sh
-# 
+
+#===================================================
 # Automation script for setting up a new OSX machine
-# 
-# Notes:
-#
-#   If installing full Xcode, it's better to install that first from the app
-#   store before running the automation script. Otherwise, Homebrew can't access
-#   the Xcode libraries as the agreement hasn't been accepted yet.
+#=================================================== 
 
 # Specify User Password
+#------------------------------------------------
+
 sudo -v
 
 # Run MacOS X Software Updates
+#------------------------------------------------
+
 echo "Running Software Updates..."
 softwareupdate -i -r
 
@@ -23,11 +23,15 @@ if ! [[ $(grep "bin/brew shellenv" "$HOME/.zprofile") ]] ; then
     echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.zprofile && source ~/.zprofile
 fi
 
-# Disable Bre Analytics
+# Disable Brew Analytics
+#------------------------------------------------
+
 brew analytics off
 brew analytics
 
 # Check everything is ok with homebrew
+#------------------------------------------------
+
 brew doctor
 
 #================================================
