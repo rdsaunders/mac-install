@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env sh
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 
@@ -14,7 +15,6 @@
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
-# COLLECT IMPORTANT USER INFORMATION
 # Get the currently logged in user
 currentUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
 
