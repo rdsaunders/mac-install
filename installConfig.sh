@@ -105,18 +105,6 @@ brew install font-sf-mono
 brew install font-sf-pro
 brew install font-new-york
 
-# Install visual studio code extensions
-# echo "Installing Visual Studio Extensions..."https://github.com/rdsaunders/mac-install/blob/master/installConfig.sh
-# code --install-extension bierner.markdown-preview-github-styles
-# code --install-extension DavidAnson.vscode-markdownlint
-# code --install-extension file-icons.file-icons
-# code --install-extension mdickin.markdown-shortcuts
-# code --install-extension wayou.vscode-todo-highlight
-# code --install-extension mrmlnc.vscode-duplicate
-# code --install-extension streetsidesoftware.code-spell-checker
-# code --install-extension Tyriar.sort-lines
-
-
 #================================================
 # Git Config & SSH Key Generation
 #================================================
@@ -131,8 +119,9 @@ ssh-keygen -t ed25519 -b 4096 -C "r.saunders@zengenti.com"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 pbcopy < ~/.ssh/id_ed25519.pub
 
+
 echo "#------------------------------------------------"
-echo "# Creating folder structure..."
+echo "# Creating folder structure...                   "
 echo "#------------------------------------------------"
 
 [[ ! -d GIT ]] && mkdir GIT
@@ -140,7 +129,8 @@ echo "#------------------------------------------------"
 
 
 echo "#------------------------------------------------"
-echo "# Automation complete"
+echo "# Automation complete                            "
 echo "#------------------------------------------------"
-echo "# Now go to Bitbucket > Manage Account > SSH Keys > Add key and paste in the copied public key"
+echo "# Now go to Bitbucket > Manage Account > SSH Keys" 
+echo "# > Add key and paste in the copied public key   "
 echo "#------------------------------------------------"
