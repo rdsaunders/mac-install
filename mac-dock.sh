@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+# Specify User Password
+#------------------------------------------------
+
+sudo -v
+
 # Path to plist
 plist="${userHome}/Library/Preferences/com.apple.dock.plist"
 
