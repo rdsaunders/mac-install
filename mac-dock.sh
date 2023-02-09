@@ -67,7 +67,7 @@ apps=(
 "/System/Applications/Calendar.app"
 "/Applications/Firefox.app"
 "/Applications/Google Chrome.app"
-"/Applications/Safari.app"
+"/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
 "/System/Applications/Visual Studio Code.app"
 "/Applications/Figma.app"
 )
