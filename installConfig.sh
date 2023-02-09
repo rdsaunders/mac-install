@@ -38,8 +38,8 @@ mkdir ~/.nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.zshrc
 nvm install node
-brew install yarn  
-
+brew install yarn
+npm i -g npm
 
 
 # Development Tools
@@ -86,7 +86,7 @@ brew install font-sf-pro
 brew install font-new-york
 
 # Install visual studio code extensions
-# echo "Installing Visual Studio Extensions..."
+# echo "Installing Visual Studio Extensions..."https://github.com/rdsaunders/mac-install/blob/master/installConfig.sh
 # code --install-extension bierner.markdown-preview-github-styles
 # code --install-extension DavidAnson.vscode-markdownlint
 # code --install-extension file-icons.file-icons
