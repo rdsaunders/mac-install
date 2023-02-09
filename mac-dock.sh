@@ -60,17 +60,16 @@ echo "clean-out the Dock"
 
 # Full path to Applications to add to the Dock
 apps=(
-"/Applications/Self Service.app"
-"/System/Applications/Launchpad.app"
-"/Applications/zoom.us.app"
+"/System/Applications/Messages.app"
+"/Applications/WhatsApp.app"
+"/Applications/Slack.app"
+"/Applications/Notion.app"
+"/System/Applications/Calendar.app"
+"/Applications/Firefox.app"
 "/Applications/Google Chrome.app"
 "/Applications/Safari.app"
-"/System/Applications/Calendar.app"
-"/System/Applications/Notes.app"
-"/Applications/Keynote.app"
-"/Applications/Numbers.app"
-"/Applications/Pages.app"
-"/System/Applications/System Preferences.app"
+"/System/Applications/Visual Studio Code.app"
+"/Applications/Figma.app"
 )
 
 # Loop through Apps and check if App is installed, If Installed at App to the Dock.
@@ -82,16 +81,6 @@ do
 		echo "${app} not installed"
     fi
 done
-
-# Add Application Folder to the Dock
-runAsUser "${dockutil}" --add /Applications --view grid --display folder --sort name --no-restart ${plist}
-
-# Add logged in users Downloads folder to the Dock
-runAsUser "${dockutil}" --add ${userHome}/Downloads --view list --display stack --sort dateadded --no-restart ${plist}
-
-# Disable show recent
-# runAsUser defaults write com.apple.dock show-recents -bool FALSE
-# echo "Hide show recent from the Dock"
 
 # sleep 3
 
