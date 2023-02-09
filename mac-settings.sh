@@ -95,6 +95,13 @@ defaults write com.apple.Siri "StatusMenuVisible" -bool "false"
 
 
 #================================================
+# Settings - Sound
+#================================================
+# Settings | Play user interface sound effects `off`
+defaults write NSGlobalDomain "com.apple.sound.uiaudio.enabled" -int "0"
+
+
+#================================================
 # Settings - Mouse
 #================================================
 # Settings | Mouse | Tracking speed `Fast`
