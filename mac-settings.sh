@@ -5,6 +5,7 @@ echo "Setting some Mac settings..."
 
 # For a helpful list of Mac OS defaults refer to https://macos-defaults.com. 
 # There is also a diff.sh script that can be run to locate the setting you are looking for.
+# All of these settings have been tested on the latest version of MacOS Ventura
 
 #================================================
 # Close System Preferences
