@@ -81,6 +81,10 @@ defaults write com.apple.dock "magnification" -bool "true"
 defaults write com.apple.dock "largesize" -int "128"
 # Settings | Desktop & Dock | Position `Bottom`
 defaults write com.apple.dock "orientation" -string "bottom"
+# Settings | Desktop & Dock | Show indicators for open applicatopms
+defaults write com.apple.dock "show-process-indicators" -bool "false"
+# Settings | Desktop & Dock | Show recent applications in the dock
+defaults write com.apple.dock "show-recents" -bool "false"
 
 
 #================================================
