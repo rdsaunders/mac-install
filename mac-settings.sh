@@ -143,6 +143,11 @@ defaults write NSGlobalDomain "AppleKeyboardUIMode" -int "2"
 # Safari | Settings | Advanced | Show Develop menu in menu bar
 defaults write com.apple.Safari.SandboxBroker "ShowDevelopMenu" -bool "true"
 
+#================================================
+# Application - VoiceOver
+#================================================
+# VoiceOver | Training | Do not show splash screen
+defaults write com.apple.VoiceOverTraining "doNotShowSplashScreen" -bool "true"
 
 #================================================
 # System - OS Defaults
