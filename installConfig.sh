@@ -42,6 +42,7 @@ brew doctor
 #------------------------------------------------
 brew install git
 brew install wget
+brew install vips
 
 # Node & NPM
 #------------------------------------------------
