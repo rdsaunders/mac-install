@@ -95,6 +95,7 @@ brew install --cask viscosity
 brew install --cask the-unarchiver
 brew install --cask 1password
 brew install --cask loom
+brew install --cask tomatobar
 
 # Fonts
 #------------------------------------------------
