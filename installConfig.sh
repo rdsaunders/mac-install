@@ -44,6 +44,11 @@ brew install git
 brew install wget
 brew install vips
 
+
+# Dotnet
+#------------------------------------------------
+brew install dotnet
+
 # Node & NPM
 #------------------------------------------------
 mkdir ~/.nvm
